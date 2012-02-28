@@ -5,7 +5,9 @@
 #
 export TIMEFORMAT=$'\nTime this session: %3R seconds.\n'
 echo ""
-echo " [ Press any key to exit ]"
+echo "Welcome $USER!"
 echo ""
-time read FOO
+echo "[ Press any key to exit ]"
+echo ""
+time read 
 exit 1
