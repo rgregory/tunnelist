@@ -1,3 +1,5 @@
 #!/bin/sh
 #
+# We keep a very limited log; only need for diag
+#
 exec multilog t n0 s1194304 .
