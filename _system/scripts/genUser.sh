@@ -18,5 +18,5 @@ fi
 
 # Create user
 #
-$AU -C "$USEREMAIL,$TOKEN" -f 1 -M -e $EXPIRES -g $GROUP -n -s $SHELL $USERNAME
+$AU -C "$USEREMAIL,$TOKEN" -f 0 -M -e $EXPIRES -g $GROUP -n -s $SHELL $USERNAME
 echo "$PASSWORD" | passwd --stdin $USERNAME
