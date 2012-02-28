@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# Use softlimit to restrict potential memory abuse
+#
 MEMLIMIT="3147483648"
 OPTIONS="-4D"
 CFG="/service/tunnelist/cfg/sshd_config"
