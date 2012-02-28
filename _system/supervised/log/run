@@ -1,0 +1,3 @@
+#!/bin/sh
+#
+exec multilog t n0 s1194304 .

@@ -1,0 +1,11 @@
+#!/bin/bash --restricted
+#
+
+# Tunnelist restricted shell for customers
+#
+export TIMEFORMAT=$'\nTime this session: %3R seconds.\n'
+echo ""
+echo " [ Press any key to exit ]"
+echo ""
+time read FOO
+exit 1

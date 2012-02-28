@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+MEMLIMIT="3147483648"
+OPTIONS="-4D"
+CFG="/service/tunnelist/cfg/sshd_config"
+
+exec 2>&1
+/command/softlimit -m $MEMLIMIT /usr/sbin/sshd $OPTIONS -f $CFG

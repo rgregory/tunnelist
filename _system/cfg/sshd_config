@@ -1,0 +1,53 @@
+# We offer a wide range of ports
+# 
+Port 23
+Port 53
+Port 443
+Port 548
+Port 587
+
+# Yes
+#
+Protocol 2
+ListenAddress 0.0.0.0
+
+# We use a central directory to store customer
+# keys.
+AuthorizedKeysFile /etc/tunnelist/keys/%u/
+ServerKeyBits 1024
+SyslogFacility AUTHPRIV
+LoginGraceTime 20
+PermitRootLogin no
+MaxAuthTries 3
+PermitEmptyPasswords no
+
+# Allowing passwords increases risk from brute
+# force scanners
+PasswordAuthentication yes
+
+PermitTunnel no
+PubkeyAuthentication yes
+RhostsRSAAuthentication no
+ChallengeResponseAuthentication no
+UsePAM yes
+
+AllowTcpForwarding no
+GatewayPorts no
+X11Forwarding no
+PrintMotd no
+PrintLastLog no
+TCPKeepAlive yes
+ClientAliveInterval 60
+ClientAliveCountMax 4
+
+UsePrivilegeSeparation yes
+PermitUserEnvironment yes
+UseDNS no
+PidFile /var/run/sshdCustomer.pid
+Compression no
+
+# Need to increase this probably
+#
+MaxStartups 10:30:60
+AllowAgentForwarding no
+AllowGroups customers
