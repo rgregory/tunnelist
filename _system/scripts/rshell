@@ -1,8 +1,5 @@
 #!/bin/bash --restricted
 #
-
-# Tunnelist restricted shell for customers
-#
 export TIMEFORMAT=$'\nTime this session: %3R seconds.\n'
 echo ""
 echo "Welcome $USER!"
