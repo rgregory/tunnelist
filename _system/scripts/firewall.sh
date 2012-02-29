@@ -1,5 +1,9 @@
+#!/bin/bash
+#
 # Tunnelist firewall configuration
 #
+
+IPT="/sbin/iptables"
 
 # Enhancements
 #
