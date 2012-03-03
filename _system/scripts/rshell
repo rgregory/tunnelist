@@ -1,5 +1,7 @@
 #!/bin/bash --restricted
 #
+set -u
+set -e
 export TIMEFORMAT=$'\nTime this session: %3R seconds.\n'
 echo ""
 echo "Welcome $USER!"

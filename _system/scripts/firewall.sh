@@ -3,6 +3,9 @@
 # Tunnelist firewall configuration
 #
 
+set -u
+set -e
+
 IPT="/sbin/iptables"
 
 # Enhancements

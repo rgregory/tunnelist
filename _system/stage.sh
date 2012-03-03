@@ -1,5 +1,8 @@
 #!/bin/bash
 #
+set -u
+set -e
+
 [ -e /command/ ] || ( echo "Need Daemontools" && exit 1)
 
 DEPLOY="createKey.sh firewall.sh genUser.sh rshell"

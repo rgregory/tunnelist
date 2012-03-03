@@ -1,5 +1,8 @@
 #!/bin/bash
 #
+set -u
+set -e
+
 PASS=""
 USERMAIL=""
 USERNAME=""
