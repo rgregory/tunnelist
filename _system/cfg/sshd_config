@@ -1,5 +1,6 @@
 # We offer a wide range of ports
 # 
+Port 22
 Port 23
 Port 53
 Port 443
@@ -43,8 +44,12 @@ ClientAliveCountMax 4
 UsePrivilegeSeparation yes
 PermitUserEnvironment yes
 UseDNS no
-PidFile /var/run/sshdCustomer.pid
+PidFile /var/run/tunnelist.pid
+
+# Performance enhancements
+#
 Compression no
+Ciphers arcfour128 arcfour256 blowfish-cbc aes128-cbc 
 
 # Need to increase this probably
 #
