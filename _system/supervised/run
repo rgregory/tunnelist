@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Use softlimit to restrict potential memory abuse
+# Use softlimit to safety
 #
 MEMLIMIT="3147483648"
 OPTIONS="-4D"

@@ -14,6 +14,7 @@ ListenAddress 0.0.0.0
 
 # We use a central directory to store customer
 # keys.
+#
 AuthorizedKeysFile /etc/tunnelist/keys/%u/
 ServerKeyBits 1024
 SyslogFacility AUTHPRIV
@@ -24,14 +25,16 @@ PermitEmptyPasswords no
 
 # Allowing passwords increases risk from brute
 # force scanners
+#
 PasswordAuthentication yes
 
+# Sane defaults
+#
 PermitTunnel no
 PubkeyAuthentication yes
 RhostsRSAAuthentication no
 ChallengeResponseAuthentication no
 UsePAM yes
-
 AllowTcpForwarding no
 GatewayPorts no
 X11Forwarding no
@@ -40,7 +43,6 @@ PrintLastLog no
 TCPKeepAlive yes
 ClientAliveInterval 60
 ClientAliveCountMax 4
-
 UsePrivilegeSeparation yes
 PermitUserEnvironment yes
 UseDNS no
@@ -51,8 +53,6 @@ PidFile /var/run/tunnelist.pid
 Compression no
 Ciphers arcfour128 arcfour256 blowfish-cbc aes128-cbc 
 
-# Need to increase this probably
-#
 MaxStartups 10:30:60
 AllowAgentForwarding no
 AllowGroups customers
