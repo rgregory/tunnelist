@@ -1,2 +1,2 @@
 #!/bin/sh
-exec multilog .
+exec multilog t n1 s1194304 .
