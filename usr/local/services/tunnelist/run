@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# 256 MB: 	268435456
+# 512 MB: 	536870912
+# 1GB:		1073741824
+#
+MEMLIMIT="1073741824"
+
+exec 2>&1
+exec /usr/local/bin/softlimit -a $MEMLIMIT \
+	/usr/sbin/sshd \
+		-4De \
+		-f /usr/local/services/tunnelist/tunnelist.conf
