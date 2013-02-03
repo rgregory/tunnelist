@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+echo “root” > /var/cron/allow
+echo “root” > /var/at/at.allow
+chmod o= /etc/crontab
+chmod o= /usr/bin/crontab
+chmod o= /usr/bin/at
+chmod o= /usr/bin/atq
+chmod o= /usr/bin/atrm
+chmod o= /usr/bin/batch
+chmod o= /etc/fstab
+chmod o= /etc/ftpusers
+chmod o= /etc/group
+chmod o= /etc/hosts
+chmod o= /etc/hosts.allow
+chmod o= /etc/hosts.equiv
+chmod o= /etc/hosts.lpd
+chmod o= /etc/inetd.conf
+chmod o= /etc/login.access
+chmod o= /etc/login.conf
+chmod o= /etc/newsyslog.conf
+chmod o= /etc/rc.conf
+chmod o= /etc/ssh/sshd_config
+chmod o= /etc/sysctl.conf
+chmod o= /etc/syslog.conf
+chmod o= /etc/ttys
+chmod o= /usr/bin/users
+chmod o= /usr/bin/w
+chmod o= /usr/bin/who
+chmod o= /usr/bin/lastcomm
+chmod o= /usr/sbin/jls
+chmod o= /usr/bin/last
+chmod o= /usr/sbin/lastlogin
