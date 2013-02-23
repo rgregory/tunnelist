@@ -1,1 +1,31 @@
 mount -t devfs devfs chroot/dev/
+
+Need to generate unique, but sequentially problematc
+usernames:
+
+16 characters is the max length
+
+pwgen -cnsB1 -H 16
+
+egrep '^[[:alnum:]]{5,6}$' /usr/share/dict/words > usernames
+
+
+possible_names=$(cat usernames | wc -l)
+r1_name = $(( ($RANDOM * 32768 + $RANDOM) % possible_names ))
+r2_name = $(( ($RANDOM * 32768 + $RANDOM) % possible_names ))
+
+# we want two sets of 'randomish' 6 character words, connected
+# via a '_'
+
+function generate_user {
+  new_first=$(cat usernames | head -$r1_name | tail -1)
+  new_second=$(cat usernames | head -$r2_name | tail -1)
+  new_user=$new_first_$new_second
+}
+
+generate_user()
+
+while (awk '/$new_user/ { print $1}' /etc/passwd > /dev/null); do
+  gen_user
+done
+  echo "done"

@@ -1,11 +1,9 @@
-#!/usr/local/bin/bash -r
+#!/bin/bash -r
 set -u
 set -e
 export TIMEFORMAT=$'\nTime this session: %3R seconds.\n'
-echo ""
-echo "Welcome $USER!"
-echo ""
-echo "[ Press any key to exit ]"
-echo ""
+echo "##################################"
+echo "### [ Press any key to exit ] ####"
+echo "##################################"
 time read 
 exit 1
